@@ -9,7 +9,7 @@ async def greeting(name: str, ctx: Context) -> str:
     Get a greeting using the greeting resource
     """
     try:
-        result = await ctx.get_resource("greeting://{name}")
+        result = await ctx.read_resource("greeting://{name}")
         content = result[0] if isinstance(result, tuple) else result
         return f"Tool response: {content}"
     except Exception as e:
@@ -25,4 +25,3 @@ def get_greeting(name: str) -> str:
 # 서버 실행하기
 if __name__ == "__main__":
     mcp.run()
-    
