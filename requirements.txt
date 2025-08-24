@@ -1,0 +1,16 @@
+# MCP 관련
+mcp
+anthropic-mcp
+
+# 웹 개발
+fastapi
+uvicorn
+
+# 데이터베이스
+sqlite3
+
+# 유틸리티
+python-dotenv
+pydantic
+httpx
+asyncio
