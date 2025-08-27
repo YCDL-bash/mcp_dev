@@ -4,7 +4,7 @@ from mcp.server.fastmcp import FastMCP
 mcp = FastMCP("server")
 
 @mcp.tool()
-def creat_folder(name: str) -> str:
+def creat_folder(folder_name: str) -> str:
     """
     C:/dev/mcp-dev/tests 아래 폴더를 생성합니다.
 
