@@ -68,7 +68,7 @@ def list_folders() -> list:
 
     folder_path = "C:/dev/mcp-dev/tests"
     folders = [f for f in os.listdir(folder_path) if os.path.isdir(os.path.join(folder_path, f))]
-    return f"Folders in '{base_path}': {', '.join(folders)}"
+    return f"Folders in '{folder_path}': {', '.join(folders)}"
 
 # 서버 실행하기
 if __name__ == "__main__":
