@@ -6,7 +6,7 @@ mcp = FastMCP("server")
 @mcp.tool()
 def creat_folder(name: str) -> str:
     """
-    C:/dev/mcp/tests 아래 폴더를 생성합니다.
+    C:/dev/mcp-dev/tests 아래 폴더를 생성합니다.
 
     Parameters
     ----------
@@ -21,7 +21,7 @@ def creat_folder(name: str) -> str:
     
     import os
 
-    folder_path = os.path.join("C:/dev/mcp/tests", folder_name)
+    folder_path = os.path.join("C:/dev/mcp-dev/tests", folder_name)
     if not os.path.exists(folder_path):
         os.makedirs(folder_path)
         return f"Folder '{folder_name}' created successfully at {folder_path}."
@@ -31,7 +31,7 @@ def creat_folder(name: str) -> str:
 @mcp.tool()
 def delete_folder(name: str) -> str:
     """
-    C:/dev/mcp/tests 아래 폴더를 삭제합니다.
+    C:/dev/mcp-dev/tests 아래 폴더를 삭제합니다.
 
     Parameters
     ----------
@@ -46,7 +46,7 @@ def delete_folder(name: str) -> str:
     
     import os
 
-    folder_path = os.path.join("C:/dev/mcp/tests", folder_name)
+    folder_path = os.path.join("C:/dev/mcp-dev/tests", folder_name)
     if os.path.exists(folder_path):
         os.rmdir(folder_path)
         return f"Folder '{name}' deleted successfully from {folder_path}."
@@ -56,7 +56,7 @@ def delete_folder(name: str) -> str:
 @mcp.tool()
 def list_folders() -> list:
     """
-    C:/dev/mcp/tests 아래 폴더 목록을 반환합니다.
+    C:/dev/mcp-dev/tests 아래 폴더 목록을 반환합니다.
 
     Returns
     -------
@@ -66,7 +66,7 @@ def list_folders() -> list:
     
     import os
 
-    folder_path = "C:/dev/mcp/tests"
+    folder_path = "C:/dev/mcp-dev/tests"
     folders = [f for f in os.listdir(folder_path) if os.path.isdir(os.path.join(folder_path, f))]
     return f"Folders in '{base_path}': {', '.join(folders)}"
 
