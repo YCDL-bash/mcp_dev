@@ -155,6 +155,6 @@ def append_to_file(file_name: str, content: str) -> str:
     except Exception as e:
         return f"Failed to append content to file '{file_name}' at {file_path}. Error: {str(e)}"
 
-# 서버 실행하기
+# 서버 실행하기 
 if __name__ == "__main__":
     mcp.run()
